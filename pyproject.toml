@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "youtube-clip-info"
+version = "0.1.0"
+description = "A script to fetch and display YouTube clip information with buffered start and end times."
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+google-auth-oauthlib = "^0.4.6"
+google-api-python-client = "^2.47.0"
+youtube-dl = "^2021.12.17"
+yt-dlp = "^2024.7.9"
+python-dotenv = "^0.19.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+youtube-clip-info = "main:main"
