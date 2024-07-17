@@ -31,12 +31,26 @@ git clone https://github.com/yourusername/YT-Clip-Extender.git
 poetry install
 ```
 
-3. Run the script:
+3. YouTube Data API v3
+
+Next, you need to create a `.env` file in the root directory of the project. This file will store your YouTube Data API v3 key. Use the following command to create and add your API key to the `.env` file:
+
+```bash
+echo "API_KEY=<your-key>" > .env
+```
+
+Ensure your `.env` file contains your `API_KEY` key in this format:
+
+```plaintext
+API_KEY=<your-key>
+```
+
+4. Run the script:
 ```sh
 poetry run youtube-clip-info
 ```
 
-4. Follow the prompts to enter the YouTube clip URL and download the specified segment.
+5. Follow the prompts to enter the YouTube clip URL and download the specified segment.
 
 ## Configuration
 
