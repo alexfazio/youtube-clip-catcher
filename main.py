@@ -124,3 +124,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#TODO: Change the encoding to H.264.
+#TODO: Output the timecode using YT-DLP friendly bash syntax. `yt-dlp --download-sections "*HH:MM:SS-HH:MM:SS" [VIDEO_URL]`
