@@ -61,6 +61,6 @@ Contributions are welcome! Please open an issue or submit a pull request.
 - [ffmpeg](https://ffmpeg.org/)
 - [Google API Python Client](https://github.com/googleapis/google-api-python-client)
 
-### TODOs
+## TODOs
 - Change the output encoding to H.264.
 - Output the timecode using YT-DLP friendly bash syntax. `yt-dlp --download-sections "*HH:MM:SS-HH:MM:SS" [VIDEO_URL]`
