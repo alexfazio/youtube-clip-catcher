@@ -1,6 +1,6 @@
 <div align="center">
   
-![YouTube-clips-banner.png](images/YouTube-clips-banner.png)
+![YouTube-clips-banner-new.png](images/YouTube-clips-banner-new.png)
 
 </div>
 
