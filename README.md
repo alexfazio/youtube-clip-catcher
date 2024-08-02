@@ -1,4 +1,6 @@
-![YouTube-clips-banner.png](images%2FYouTube-clips-banner.png)
+<p align="center">
+  ![YouTube-clips-banner.png](images%2FYouTube-clips-banner.png)
+</p>
 
 # YT-Clip-Downloader
 
