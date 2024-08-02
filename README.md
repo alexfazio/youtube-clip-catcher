@@ -1,6 +1,8 @@
-<p align="center">
-  <img src="images/YouTube-clips-banner.png" alt="YouTube-clips-banner">
-</p>
+<div align="center">
+  
+![YouTube-clips-banner.png](images/YouTube-clips-banner.png)
+
+</div>
 
 # YT-Clip-Downloader
 
