@@ -1,5 +1,5 @@
 <p align="center">
-  ![YouTube-clips-banner.png](images%2FYouTube-clips-banner.png)
+  <img src="images/YouTube-clips-banner.png" alt="YouTube-clips-banner">
 </p>
 
 # YT-Clip-Downloader
