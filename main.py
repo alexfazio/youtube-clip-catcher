@@ -1,11 +1,17 @@
 import re
 import requests
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 from urllib.parse import parse_qs, urlparse
 from segment_downloader import download_clip  # Import the new function
 from dotenv import load_dotenv
 import os
 import json
+from rich.console import Console
+from rich.console import Console
+from rich.panel import Panel
+from rich.syntax import Syntax
+from rich.markdown import Markdown
 
 # Load environment variables from .env file
 load_dotenv()
@@ -56,8 +62,13 @@ def get_video_details(youtube, video_id):
                 'title': video['snippet']['title'],
                 'duration': video['contentDetails']['duration']
             }
+    except HttpError as e:
+        if "API key expired" in str(e):
+            print("API key expired. Please renew the API key at console.cloud.google.com")
+        else:
+            print(f"An error occurred: {e}")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An unexpected error occurred: {e}")
     return None
 
 
@@ -123,7 +134,13 @@ def main():
 
 
 if __name__ == "__main__":
+
+    console = Console()
+    console.print(Panel("Welcome to the YouTube Clip Downloader & Extender", title="Welcome", style="bold green"))
+    console.print("Type 'exit' to end the conversation.")
+
     main()
+
 
 #TODO: Change the encoding to H.264.
 #TODO: Output the timecode using YT-DLP friendly bash syntax. `yt-dlp --download-sections "*HH:MM:SS-HH:MM:SS" [VIDEO_URL]`

@@ -13,6 +13,8 @@ google-api-python-client = "^2.47.0"
 youtube-dl = "^2021.12.17"
 yt-dlp = "^2024.7.9"
 python-dotenv = "^0.19.2"
+prompt-toolkit = "^3.0.47"
+rich = "^13.7.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

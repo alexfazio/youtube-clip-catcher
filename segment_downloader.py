@@ -2,6 +2,12 @@ import os
 import subprocess
 from yt_dlp import YoutubeDL
 
+async def get_user_input(prompt="You: "):
+    style = Style.from_dict({
+        'prompt': 'cyan bold',
+    })
+    session = PromptSession(style=style)
+    return await session.prompt_async(prompt, multiline=False)
 
 def download_clip(video_url, start_time, end_time, output_path):
     """
@@ -64,7 +70,6 @@ def download_clip(video_url, start_time, end_time, output_path):
 
 
 if __name__ == "__main__":
-    # Example usage
     video_url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     start_time = 30  # Start at 30 seconds
     end_time = 60  # End at 60 seconds

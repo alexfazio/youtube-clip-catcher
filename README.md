@@ -1,6 +1,6 @@
-# YT-Clip-Extender
+# YT-Clip-Downloader
 
-YT-Clip-Extender is a Python script designed to extract and download specific segments of YouTube videos based on YouTube clip URLs. Given a YouTube clip URL, this script queries the YouTube APIs to obtain the start and end time codes of the sub-clip in relation to the full video and downloads only that segment.
+YT-Clip-Downlaoder is a Python script designed to download segments of a YouTube video based on a YouTube clip URL. Given a YouTube clip URL, this script queries the YouTube APIs to obtain the start and end time codes of the sub-clip in relation to the full video and downloads only that specific segment.
 
 ## Features
 
@@ -22,7 +22,7 @@ The script will return the start and end times of the sub-clip in relation to th
 
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/YT-Clip-Extender.git
+git clone https://github.com/yourusername/YT-Clip-Downlaoder.git
 ```
 
 2. Install the dependencies:
@@ -55,7 +55,7 @@ poetry run youtube-clip-info
 ## Configuration
 
 The script uses a configuration file `config.json` to set the desired video buffer:
-```json:yt-clip-extender/config.json
+```json:YT-Clip-Downlaoder/config.json
 {
     "desired_video_buffer": 30
 }
