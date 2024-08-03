@@ -6,7 +6,7 @@
 
 # youtube-clip-catcher
 
-youtube-clip-catcher is a Python script designed to download segments of a YouTube video based on a YouTube clip URL. Given a YouTube clip URL, this script queries the YouTube APIs to obtain the start and end time codes of the sub-clip in relation to the full video and downloads only that specific segment.
+YouTube-clip-catcher is a Python script designed to fetch and display metadata of a YouTube clip (not a full YouTube video) and download it with custom buffered start and end times. Given a YouTube clip URL, this script queries the YouTube APIs to obtain the start and end time codes of the sub-clip in relation to the full video and downloads only that specific segment.
 
 ## Features
 
