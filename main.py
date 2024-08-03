@@ -83,16 +83,25 @@ def get_clip_times(clip_id):
         # Convert milliseconds to seconds
         start_time = start_ms / 1000
         end_time = end_ms / 1000
-        # Apply buffer to start time, but don't let it go below 0
-        buffered_start = max(0, start_time - DESIRED_VIDEO_BUFFER)
-        # Add buffer to end time
-        buffered_end = end_time + DESIRED_VIDEO_BUFFER
 
         print("\nExtracted clip times:")
         print(f"Original start time: {start_time:.2f} seconds")
         print(f"Original end time: {end_time:.2f} seconds")
-        print(f"Buffered start time: {buffered_start:.2f} seconds")
-        print(f"Buffered end time: {buffered_end:.2f} seconds")
+
+        # Ask user if they want to apply a buffer
+        apply_buffer = input("Do you want to apply a buffer time before and after the clip? (y/n): ").lower() == 'y'
+
+        if apply_buffer:
+            buffer_time = float(input("Enter the buffer time in seconds: "))
+            buffered_start = max(0, start_time - buffer_time)
+            buffered_end = end_time + buffer_time
+
+            print(f"Buffered start time: {buffered_start:.2f} seconds")
+            print(f"Buffered end time: {buffered_end:.2f} seconds")
+        else:
+            buffered_start = start_time
+            buffered_end = end_time
+            print("No buffer applied.")
 
         return start_time, end_time, buffered_start, buffered_end
     
@@ -102,7 +111,7 @@ def get_clip_times(clip_id):
 
 def get_video_details(youtube, video_id):
     try:
-        print(f"\nFetching video details for video ID: {video_id}")
+        print(f"\n[youTube-clip-catcher] Fetching video details for video ID: {video_id}")
         response = youtube.videos().list(
             part="snippet,contentDetails,statistics,status",
             id=video_id
@@ -198,7 +207,7 @@ def main():
             full_video_url = f"https://www.youtube.com/watch?v={video_id}"
 
             try:
-                downloaded_path = download_clip(full_video_url, start_time, end_time, output_path)
+                downloaded_path = download_clip(full_video_url, buffered_start, buffered_end, output_path)
                 if downloaded_path:
                     print(f"Clip successfully downloaded and saved to: {downloaded_path}")
                 else:
