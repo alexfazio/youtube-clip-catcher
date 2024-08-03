@@ -4,9 +4,9 @@
 
 </div>
 
-# YT-Clip-Downloader
+# youtube-clip-catcher
 
-YT-Clip-Downloader is a Python script designed to download segments of a YouTube video based on a YouTube clip URL. Given a YouTube clip URL, this script queries the YouTube APIs to obtain the start and end time codes of the sub-clip in relation to the full video and downloads only that specific segment.
+youtube-clip-catcher is a Python script designed to download segments of a YouTube video based on a YouTube clip URL. Given a YouTube clip URL, this script queries the YouTube APIs to obtain the start and end time codes of the sub-clip in relation to the full video and downloads only that specific segment.
 
 ## Features
 
@@ -28,7 +28,7 @@ The script will return the start and end times of the sub-clip in relation to th
 
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/YT-Clip-Downloader.git
+git clone https://github.com/yourusername/youtube-clip-catcher.git
 ```
 
 2. Install the dependencies:
@@ -61,7 +61,7 @@ poetry run youtube-clip-info
 ## Configuration
 
 The script uses a configuration file `config.json` to set the desired video buffer:
-```json:YT-Clip-Downloader/config.json
+```json:youtube-clip-catcher/config.json
 {
     "desired_video_buffer": 30
 }
