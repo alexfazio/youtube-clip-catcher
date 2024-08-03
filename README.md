@@ -53,7 +53,7 @@ API_KEY=<your-key>
 
 4. Run the script:
 ```sh
-poetry run youtube-clip-info
+poetry run python main.py
 ```
 
 5. Follow the prompts to enter the YouTube clip URL and download the specified segment.
