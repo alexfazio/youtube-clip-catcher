@@ -2,7 +2,7 @@
 name = "youtube-clip-info"
 version = "0.1.0"
 description = "A script to fetch and display YouTube clip information with buffered start and end times."
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Alex Fazio <alessandro.fazio@me.com>"]
 readme = "README.md"
 package-mode = false
 
