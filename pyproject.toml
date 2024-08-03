@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "youtube-clip-info"
 version = "0.1.0"
-description = "A script to fetch and display YouTube clip information with buffered start and end times."
+description = "A Python script to fetch and display metadata of a YouTube clip (not a full YouTube video) and download it with custom buffered start and end times."
 authors = ["Alex Fazio <alessandro.fazio@me.com>"]
 readme = "README.md"
 package-mode = false
